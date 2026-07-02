@@ -1,0 +1,16 @@
+{
+  "name": "url-shortener-fullstack",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full-stack URL shortener (Express + MongoDB backend, React + Vite frontend)",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -n backend,frontend -c blue,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run build && npm start --prefix backend",
+    "test:backend": "npm test --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
